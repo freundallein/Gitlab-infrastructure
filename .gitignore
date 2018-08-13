@@ -1,0 +1,12 @@
+auth/
+ssh/
+certs/
+storage/gitlab/data/
+storage/gitlab/logs/
+storage/gitlab/config/ssh_*
+storage/gitlab/config/trusted_certs/
+storage/gitlab/config/gitlab-secrets.json
+storage/gitlab-runner/data/
+storage/redis/data
+storage/postgresql/
+storage/registry/docker

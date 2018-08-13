@@ -1,0 +1,17 @@
+concurrent = 1
+check_interval = 0
+
+[[runners]]
+  name = "Docker runner"
+  url = ""http://gitlab/ci"
+  token = "custom2token"
+  executor = "docker"
+  [runners.docker]
+    tls_verify = false
+    image = "python:latest"
+    privileged = true
+    disable_cache = false
+    volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/srv/ssh:/ssh", "/cache"]
+    extra_hosts = ["git.example.dev:192.168.1.2"]
+    shm_size = 0
+  [runners.cache]
